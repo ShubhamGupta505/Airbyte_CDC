@@ -49,6 +49,8 @@ You can run Airbyte locally with Docker.
 ```bash
 git clone https://github.com/ShubhamGupta505/Airbyte_CDC.git
 cd Airbyte_CDC-main
+
+give all means 777 permission to ./kafka/image_data for getting data in local system
 ./start.sh
 ```
 
