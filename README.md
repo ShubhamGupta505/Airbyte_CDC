@@ -63,6 +63,13 @@ Follow web app UI instructions to set up a source, destination and connection to
 
 Read the [Airbyte docs](https://docs.airbyte.com).
 
+### Don't know what to write in arbyte UI
+- For kafka: Visit [https://github.com/ShubhamGupta505/Airbyte_CDC/tree/3999f4c87d7c0b0b2eb65d703b46816ccd61ff46/Images/kafka-image](https://github.com/ShubhamGupta505/Airbyte_CDC/tree/3999f4c87d7c0b0b2eb65d703b46816ccd61ff46/Images/kafka-image)
+- For MySql: Visit [https://github.com/ShubhamGupta505/Airbyte_CDC/tree/3999f4c87d7c0b0b2eb65d703b46816ccd61ff46/Images/mysql-image](https://github.com/ShubhamGupta505/Airbyte_CDC/tree/3999f4c87d7c0b0b2eb65d703b46816ccd61ff46/Images/mysql-image)
+- For Postgres: Visit [https://github.com/ShubhamGupta505/Airbyte_CDC/tree/3999f4c87d7c0b0b2eb65d703b46816ccd61ff46/Images/poatgres-image](https://github.com/ShubhamGupta505/Airbyte_CDC/tree/3999f4c87d7c0b0b2eb65d703b46816ccd61ff46/Images/poatgres-image)
+- For MongoDB: Visit [https://github.com/ShubhamGupta505/Airbyte_CDC/tree/3999f4c87d7c0b0b2eb65d703b46816ccd61ff46/Images/mongo-image](https://github.com/ShubhamGupta505/Airbyte_CDC/tree/3999f4c87d7c0b0b2eb65d703b46816ccd61ff46/Images/mongo-image)
+- For Local File: Visit [https://github.com/ShubhamGupta505/Airbyte_CDC/tree/3999f4c87d7c0b0b2eb65d703b46816ccd61ff46/Images/file-image](https://github.com/ShubhamGupta505/Airbyte_CDC/tree/3999f4c87d7c0b0b2eb65d703b46816ccd61ff46/Images/file-image)
+
 ### Manage Airbyte configurations with code
 
 You can also programmatically manage sources, destinations, and connections with YAML files, [Octavia CLI](https://github.com/airbytehq/airbyte/tree/master/octavia-cli), and API.
