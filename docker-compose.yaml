@@ -233,6 +233,7 @@ services:
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,OUTSIDE:PLAINTEXT
     volumes:
       - ./kafka/server.properties:/etc/kafka/server.properties
+      # - ./neo4j_file/neo4j-desktop-1.5.2-x86_64.AppImage:/home/neo4j-desktop-1.5.2-x86_64.AppImage
       - ./kafka/consumer.py:/home/consumer.py
 
   schema-registry:
@@ -261,6 +262,22 @@ services:
     ports:
       - "27017:27017"
     restart: always
+
+  neo4j:
+    image: neo4j:latest
+    container_name: testneo4j
+    restart: always
+    ports:
+      - 7474:7474
+      - 7687:7687
+    volumes:
+      - ./neo4j_file/data:/data
+      - ./neo4j_file/conf:/var/lib/neo4j/conf
+      - ./neo4j_file/import:/var/lib/neo4j/import
+      - ./neo4j_file/logs:/logs
+      - ./neo4j_file/plugins:/plugins
+    environment: 
+      - NEO4J_AUTH=neo4j/test
 
 volumes:
   workspace:
