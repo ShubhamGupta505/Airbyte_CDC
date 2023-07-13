@@ -1,3 +1,6 @@
+username = neo4j
+password = test
+
 LOAD CSV WITH HEADERS FROM 'file:///movie.csv' 
 AS row MERGE (m:movie {name: row.name, release_period: row.release_period, remake: row.remake, franchise: row.franchise, genre:row.genre, screens: toInteger(row.screens), revenue: toInteger(row.revenue), budget:toInteger(row.budget)});
 

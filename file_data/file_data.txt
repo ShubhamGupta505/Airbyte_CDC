@@ -1,0 +1,43 @@
+last column name:- _ab_cdc_deleted_at
+last zero(0) is for above column which value wil change in process of filtering and Value becomes the NaN(null)
+
+
+Provoked,Normal,No,No,drama,No,No,No,Aishwarya Rai,Jag Mundhra,A.R. Rehman,90,120000000,132797500,0
+The Mistress Of Spices,Holiday,No,No,drama,No,No,Yes,Aishwarya Rai,Somnath Sen,Mahesh Balraj,50,90000000,34400000,0
+U Me Aur Hum,Holiday,No,No,love_story,No,Yes,No,Ajay Devgn,Ajay Devgn,Vishal Bhardwaj,600,250000000,400200000,0
+Shivaay,Holiday,No,No,thriller,No,No,Yes,Ajay Devgn,Ajay Devgn,Jasleen Royal,2950,1030000000,1241455000,0
+Blackmail,Normal,No,No,thriller,No,No,No,Ajay Devgn,Anil Devgan,Himesh Reshammiya,325,95000000,65872500,0
+Cash,Normal,No,No,thriller,No,No,No,Ajay Devgn,Anubhav Sinha,Vishal - Shekhar,1000,320000000,293005000,0
+Atithi Tum Kab Jaoge?,Normal,No,No,comedy,No,No,No,Ajay Devgn,Ashwini Dhir,Pritam,1050,220000000,433110000,0
+Son Of Sardaar,Holiday,Yes,No,masala,No,No,No,Ajay Devgn,Ashwini Dhir,Himesh Reshammiya,2000,670000000,1351247500,0
+Rascals,Holiday,No,No,comedy,No,No,No,Ajay Devgn,David Dhawan,Vishal - Shekhar,1850,460000000,510181250,0
+Main Aisa Hi Hoon,Holiday,No,No,drama,No,No,No,Ajay Devgn,Harry Baweja,Himesh Reshammiya,250,75000000,51775000,0
+Shikhar,Holiday,No,No,drama,No,No,No,Ajay Devgn,John M. Matthan,Viju Shah,350,140000000,103450000,0
+Insan,Holiday,No,No,action,No,No,No,Ajay Devgn,K. Subhash,Himesh Reshammiya,350,125000000,104100000,0
+Zameer - The Fire Within,Holiday,No,No,thriller,No,Yes,No,Ajay Devgn,Kamal,Jatin - Lalit,55,45000000,15850000,0
+Toonpur Ka Superrhero,Holiday,No,No,fantasy,No,Yes,No,Ajay Devgn,Kireet Khurana,Anu Malik,500,250000000,51046250,0
+Dil Toh Baccha Hai Ji,Normal,No,No,comedy,No,No,No,Ajay Devgn,Madhur Bhandarkar,Pritam,1350,290000000,404600000,0
+Tango Charlie,Holiday,No,No,action,No,No,No,Ajay Devgn,Mani Shankar,Anu Malik,325,135000000,114856250,0
+Once Upon A Time In Mumbaai,Normal,No,No,drama,No,No,No,Ajay Devgn,Milan Luthria,Pritam,1400,350000000,851780000,0
+Baadshaho,Holiday,No,No,action,No,No,No,Ajay Devgn,Milan Luthria,Ankit Tiwari,2850,900000000,1011820000,0
+Drishyam,Normal,Yes,No,thriller,No,No,No,Ajay Devgn,Nishikant Kamat,Vishal Bhardwaj,2250,620000000,1104260000,0
+Action Jackson,Normal,No,No,action,No,No,No,Ajay Devgn,Prabhu Deva,Himesh Reshammiya,3350,930000000,888717500,0
+Apaharan,Normal,No,No,action,No,No,No,Ajay Devgn,Prakash Jha,Aadesh Shrivastava,425,110000000,231650000,0
+Satyagraha,Normal,No,No,drama,No,No,No,Ajay Devgn,Prakash Jha,Salim - Sulaiman,2650,730000000,910075000,0
+Aakrosh,Holiday,No,No,thriller,No,No,No,Ajay Devgn,Priyadarshan,Pritam,1200,380000000,194030000,0
+Tezz,Normal,Yes,No,thriller,No,No,No,Ajay Devgn,Priyadarshan,Sajid - Wajid,1950,520000000,261237500,0
+Halla Bol,Normal,No,No,drama,No,No,No,Ajay Devgn,Rajkumar Santoshi,Sukhwinder Singh,925,270000000,193900000,0
+Golmaal - Fun Unlimited,Normal,No,Yes,comedy,No,No,No,Ajay Devgn,Rohit Shetty,Vishal - Shekhar,600,150000000,467260000,0
+Sunday,Holiday,Yes,No,comedy,No,No,No,Ajay Devgn,Rohit Shetty,Raghav Sachar,900,220000000,319615000,0
+Golmaal Returns,Holiday,No,Yes,comedy,No,No,Yes,Ajay Devgn,Rohit Shetty,Ashish Pandit,1250,350000000,800080000,0
+All The Best - Fun Begins,Holiday,No,No,comedy,No,No,No,Ajay Devgn,Rohit Shetty,Pritam,1300,410000000,617775000,0
+Golmaal 3,Holiday,No,Yes,comedy,No,No,No,Ajay Devgn,Rohit Shetty,Pritam,1750,500000000,1695635000,0
+Singham,Normal,Yes,No,action,No,No,No,Ajay Devgn,Rohit Shetty,Ajay - Atul,2050,410000000,1413035000,0
+Bol Bachchan,Normal,No,No,comedy,No,No,No,Ajay Devgn,Rohit Shetty,Ajay - Atul,2500,660000000,1596640000,0
+Singham Returns,Holiday,No,Yes,action,No,No,No,Ajay Devgn,Rohit Shetty,Honey Singh,3500,1050000000,2165697500,0
+Golmaal Again,Holiday,No,Yes,comedy,No,No,Yes,Ajay Devgn,Rohit Shetty,DJ Chetas,3300,1420000000,3110450000,0
+Himmatwala,Holiday,Yes,No,masala,No,No,No,Ajay Devgn,Sajid Khan,Sajid - Wajid,3150,680000000,657993750,0
+Kaal,Holiday,No,No,thriller,No,Yes,No,Ajay Devgn,Soham Shah,Salim - Sulaiman,450,130000000,331175000,0
+Omkara,Normal,No,No,drama,No,No,No,Ajay Devgn,Vishal Bhardwaj,Vishal Bhardwaj,625,260000000,424120000,0
+Pal Pal Dil Ke Ssaat,Holiday,No,No,drama,No,Yes,Yes,Ajay Jadeja,V.K. Kumar,Abhishek Ray,30,15000000,800000,0
+Boyfriend.com,Normal,No,No,drama,Yes,Yes,Yes,Ajay Kumar,L.N. Masade,Harish Sharma,5,2500000,170000,0

@@ -6,6 +6,7 @@ db.createCollection('mytable');
 
 // For Delete in MongoDB Only UPDATE the status of _ab_cdc_deleted_at
 // e.g., db.mytable.update({movie_name:"Faraar"},{$set:{"_ab_cdc_deleted_at":"1"}})
+// db.mytable.updateMany({"movie_name":"The World Of Fashion"},{$set:{"_ab_cdc_deleted_at":"1"}})
 
 // db.createCollection('orders');
 // db.colors.insert([{ _id : 1, first_name : 'Bob', last_name : 'Hopper', email : 'thebob@example.com' }]);

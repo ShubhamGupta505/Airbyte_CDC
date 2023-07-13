@@ -1,3 +1,14 @@
+NOTES:-
+
+After running the script and after sync the data from airbyte for sending to kafka, data will show in 4 ( four ) csv files which is located in kafka/image_data folder
+data.csv has all data which comes from all DATABASES ( Postgres, Mysql, Mongodb, File)
+movie.csv has data which is defined in consumer.py file
+director_movie.csv has data which is defined in consumer.py file
+actor_movie.csv has data which is defined in consumer.py file
+
+
+
+
 /etc/kafka/server.properties
 
 delete.topic.enable=true 

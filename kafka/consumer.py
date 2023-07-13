@@ -9,68 +9,40 @@ from neo4j.exceptions import ServiceUnavailable
 import numpy as np
 # from py2neo import Graph
 from neo4j import GraphDatabase
-# from pandasql import sqldf
+from pandasql import sqldf
 from pathlib import Path
-
-# class Neo4jConnection:
-    
-#     def __init__(self, uri, user, pwd):
-#         self.__uri = uri
-#         self.__user = user
-#         self.__pwd = pwd
-#         self.__driver = None
-#         try:
-#             self.__driver = GraphDatabase.driver(self.__uri, auth=(self.__user, self.__pwd))
-#         except Exception as e:
-#             print("Failed to create the driver:", e)
-        
-#     def close(self):
-#         if self.__driver is not None:
-#             self.__driver.close()
-        
-#     def query(self, query, db=None):
-#         assert self.__driver is not None, "Driver not initialized!"
-#         session = None
-#         response = None
-#         try: 
-#             session = self.__driver.session(database=db) if db is not None else self.__driver.session() 
-#             response = list(session.run(query))
-#         except Exception as e:
-#             print("Query failed:", e)
-#         finally: 
-#             if session is not None:
-#                 session.close()
-#         return response
 
 
 if __name__=='__main__':
-    consumer = KafkaConsumer(bootstrap_servers=['localhost:9092'],auto_offset_reset='earliest')
+    consumer = KafkaConsumer(bootstrap_servers=['broker0:19092'],auto_offset_reset='earliest')
     consumer.assign([TopicPartition('orders', 0)])
     print("starting the consumer")
-    # dataframe = pd.DataFrame(columns=['Movie_Name','Release Period','Whether Remake','Whether Franchise','Genre','New Actor','New Director','New Music Director','Lead Star','Director','Music Director','Number of Screens','Budget(INR)','Revenue(INR)']) # Note that there are now row data inserted.
 
-    dataframe = pd.DataFrame(columns=['movie_name','release_period','whether_remake','whether_franchise','genre','new_actor','new_director','new_music_director','lead_star','director','music_director','number_of_screens','budgetinr','revenueinr','_ab_cdc_deleted_at']) # Note that there are now row data inserted.
-
+#     dataframe = pd.DataFrame(columns=['movie_name','release_period','whether_remake','whether_franchise','genre','new_actor','new_director','new_music_director','lead_star','director','music_director','number_of_screens','budgetinr','revenueinr','_ab_cdc_deleted_at']) # Note that there are now row data inserted.
+    dataframe = []
     driver=GraphDatabase.driver("neo4j://neo4j:7687", auth=("neo4j", "test"))
     session = driver.session()
     i = 0
     # print(dataframe)
     for msg in consumer:
-        df2 = pd.read_json(msg.value, orient ='index')
+        df1 = msg.value.decode('utf-8')
+        data_dict = json.loads(df1)
+        df2 = pd.DataFrame(data_dict["_airbyte_data"], index=[0])
+        # df2['index'] = i
+        # df3 = df2.drop(['_ab_cdc_updated_at','_ab_cdc_log_pos', '_ab_cdc_log_file'], axis=1)
 
-        
-        df = df2.iloc[1:2]
-        df['index'] = i
-        df = df.set_index('index')
+        dataframe.append(df2)
+        result_df = pd.concat(dataframe, ignore_index=True)
+        result_df['_ab_cdc_deleted_at'] = result_df['_ab_cdc_deleted_at'].replace(0, np.NaN)    # For coming file Data
+        result_df = result_df.drop_duplicates(subset=['movie_name'], keep='last')
+        result_df = result_df[result_df._ab_cdc_deleted_at.isnull()]
+        # result_df = result_df.set_index('index')
+        # print(result_df)
 
-        dataframe = pd.concat([dataframe, df])
-        print(dataframe)
-        dataframe = dataframe.drop_duplicates(subset=['movie_name'], keep='last')
-        dataframe = dataframe[dataframe._ab_cdc_deleted_at.isnull()]
+        result_df.drop(['_ab_cdc_updated_at','_ab_cdc_log_file', '_ab_cdc_log_pos', '_ab_cdc_lsn'], axis=1, errors='ignore').to_csv("/home/appuser/files/data.csv", index=False)
 
-        dataframe.to_csv("/home/data.csv",encoding='utf-8')
-
-        df = pd.read_csv("/home/data.csv")
+        df = pd.read_csv("/home/appuser/files/data.csv")
+        # print(df)
 
         movie = "name,release_period,remake,franchise,genre,screens,revenue,budget\n"
 
@@ -101,21 +73,21 @@ if __name__=='__main__':
         print("director_movie -------", director_movie)
         print("type of director_movie: ",type(director_movie))
 
-        output_file = open("/home/movie.csv", 'w')
+        output_file = open("/home/appuser/files/movie.csv", 'w')
         output_file.write(movie)
         output_file.close()
 
-        output_file2 = open("/home/director_movie.csv", 'w')
+        output_file2 = open("/home/appuser/files/director_movie.csv", 'w')
         output_file2.write(director_movie)
         output_file2.close()
 
-        output_file3 = open("/home/actor_movie.csv", 'w')
+        output_file3 = open("/home/appuser/files/actor_movie.csv", 'w')
         output_file3.write(actor_movie)
         output_file3.close()
 
-        movie_df = pd.read_csv("/home/movie.csv")
-        director_df = pd.read_csv("/home/director_movie.csv")
-        actor_df = pd.read_csv("/home/actor_movie.csv")
+        movie_df = pd.read_csv("/home/appuser/files/movie.csv")
+        director_df = pd.read_csv("/home/appuser/files/director_movie.csv")
+        actor_df = pd.read_csv("/home/appuser/files/actor_movie.csv")
 
         print(movie_df)
         print(director_df)

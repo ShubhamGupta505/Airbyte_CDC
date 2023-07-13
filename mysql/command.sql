@@ -50,6 +50,9 @@ CREATE TABLE mytable(
   ,revenueinr         INTEGER  NOT NULL
 );
 
+ALTER TABLE mytable MODIFY COLUMN budgetinr BIGINT;
+ALTER TABLE mytable MODIFY COLUMN revenueinr BIGINT;
+
 INSERT INTO mytable(movie_name,release_period,whether_remake,whether_franchise,genre,new_actor,new_director,new_music_director,lead_star,director,music_director,number_of_screens,budgetinr,revenueinr) VALUES ('Golden Boys','Normal','No','No','suspense','Yes','No','No','Jeet Goswami','Ravi Varma','Baba Jagirdar',5,5000000,85000);
 INSERT INTO mytable(movie_name,release_period,whether_remake,whether_franchise,genre,new_actor,new_director,new_music_director,lead_star,director,music_director,number_of_screens,budgetinr,revenueinr) VALUES ('Kaccha Limboo','Holiday','No','No','drama','Yes','No','Yes','Karan Bhanushali','Sagar Ballary','Amardeep Nijjer',75,15000000,825000);
 INSERT INTO mytable(movie_name,release_period,whether_remake,whether_franchise,genre,new_actor,new_director,new_music_director,lead_star,director,music_director,number_of_screens,budgetinr,revenueinr) VALUES ('Not A Love Story','Holiday','No','No','thriller','No','No','No','Mahie Gill','Ram Gopal Verma','Sandeep Chowta',525,75000000,56700000);
