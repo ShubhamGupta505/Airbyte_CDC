@@ -51,6 +51,7 @@ git clone https://github.com/ShubhamGupta505/Airbyte_CDC.git
 cd Airbyte_CDC-main
 
 give all means 777 permission to ./kafka/image_data for getting data in local system
+sudo chmod 777 ./kafka/image_data  ( You have to type this command in your local or where you run this code in terminal )
 ./start.sh
 ```
 
